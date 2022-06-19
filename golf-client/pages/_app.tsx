@@ -1,4 +1,4 @@
-import { FindInPage, Restore, Settings } from "@mui/icons-material";
+import { GolfCourse, Notifications, Settings } from "@mui/icons-material";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -44,18 +44,18 @@ function MyApp({ Component, pageProps }: AppProps) {
               LinkComponent={Link}
               href="/notifications"
               label="Noti"
-              icon={<Restore />}
+              icon={<Notifications />}
             />
             <BottomNavigationAction
               LinkComponent={Link}
               href="/"
               label="Find"
-              icon={<FindInPage />}
+              icon={<GolfCourse />}
             />
             <BottomNavigationAction
               LinkComponent={Link}
               href="/mypage"
-              label="My Page"
+              label="Profile"
               icon={<Settings />}
             />
           </BottomNavigation>
