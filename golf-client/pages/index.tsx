@@ -1,22 +1,17 @@
-import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import type { InferGetServerSidePropsType, NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { ReactElement } from "react";
+import RoundingCard from "../components/RoundingCard";
 import { Rounding } from "../models";
-import styles from "../styles/Home.module.css";
 
 const Home = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ): ReactElement => {
   return (
-    <Box sx={{ background: "red", width: 300, height: 300 }}>
-      <>
-        {props.data.roundings.map((rounding) => (
-          <Typography>{rounding.description}</Typography>
-        ))}
-      </>
+    <Box sx={{ p: 3 }}>
+      {props.data.roundings.map((rounding) => (
+        <RoundingCard key={rounding.id} rounding={rounding} />
+      ))}
     </Box>
   );
 };

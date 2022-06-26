@@ -15,18 +15,26 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [value, setValue] = useState();
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", height: "100vh" }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        height: "100vh",
+        maxWidth: 600,
+        marginX: "auto",
+      }}
+    >
       <CssBaseline />
       <Box
         sx={{
-          maxWidth: 600,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           height: "100%",
+          width: "100%",
         }}
       >
-        <Box sx={{ flex: "1 0 0" }}>
+        <Box sx={{ flex: "1 0 0", width: "100%" }}>
           <Component {...pageProps} />
         </Box>
         <Paper
